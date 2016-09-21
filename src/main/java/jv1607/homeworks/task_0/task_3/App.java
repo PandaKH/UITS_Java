@@ -62,7 +62,7 @@ public class App {
         "этиологические"
     };
     
-    static {
+    public static void initPatient(){
         patient = new Patient[50];
         for(int i=0; i<patient.length; i++){
             Patient s = new Patient();
@@ -84,6 +84,7 @@ public class App {
         }
     }
     public static void main(String[] args) {
+        initPatient();
         print(patient);
         System.out.println("");
         diagnostic(patient, "этиологические");

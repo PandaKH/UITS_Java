@@ -22,7 +22,7 @@ public class App {
         "Промышленный"
     };
     
-    static {
+    public static void initHouse(){
         house = new House[50];
         for(int i=0; i<house.length; i++){
             House s = new House();
@@ -48,6 +48,7 @@ public class App {
         }
     }
     public static void main(String[] args) {
+        initHouse();
         print(house);
         System.out.println("");
         room(house, 3);

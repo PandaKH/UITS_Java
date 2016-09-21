@@ -55,7 +55,7 @@ public class App {
         "Saltovskaya"
     };
 
-    static {
+    public static void initCustomer(){
         customer = new Customer[50];
         for(int i=0; i<customer.length; i++){
             Customer s = new Customer();
@@ -70,6 +70,7 @@ public class App {
         }
     }
     public static void main(String[] args) {
+        initCustomer();
         print(customer);
         System.out.println("");
         System.out.println("Сортировка по фамилии: ");

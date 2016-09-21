@@ -1,3 +1,4 @@
+
 package jv1607.homeworks.task_0.task_1;
 
 import java.text.SimpleDateFormat;
@@ -5,8 +6,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Random;
 
-        
-        
 public class App {
     static Random r = new Random();
     static Student[] student;
@@ -73,7 +72,7 @@ public class App {
         "Saltovskaya"
     };
 
-    static {
+    public static void initStudent(){
         student = new Student[50];
         for(int i=0; i<student.length; i++){
             Student s = new Student();
@@ -107,6 +106,7 @@ public class App {
         }
     }
     public static void main(String[] args) {
+        initStudent();
         print(student);
         System.out.println("");
         faculty(student, "ПММ");

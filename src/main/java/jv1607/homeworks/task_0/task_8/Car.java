@@ -1,5 +1,5 @@
 
-package jv1607.task_0.task_8;
+package jv1607.homeworks.task_0.task_8;
 
 public class Car {
     private int id;

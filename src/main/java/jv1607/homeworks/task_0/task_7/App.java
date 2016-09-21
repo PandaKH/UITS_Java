@@ -54,7 +54,7 @@ public class App {
         "Saltovskaya"
     };
     
-    static{
+    public static void initPhone(){
         phone = new Phone[50];
         for(int i=0; i<phone.length; i++){
             Phone s = new Phone();
@@ -72,6 +72,7 @@ public class App {
         }
     }
     public static void main(String[] args) {
+        initPhone();
         print(phone);
         System.out.println("");
         urban(phone, 80);

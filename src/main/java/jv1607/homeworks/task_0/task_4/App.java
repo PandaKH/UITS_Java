@@ -43,7 +43,7 @@ public class App {
         "Lunakovich"
     };
     
-    static{
+    public static void initAbiturient(){
         abiturient = new Abiturient[50];
         for(int i=0; i<abiturient.length; i++){
             Abiturient s = new Abiturient();
@@ -67,6 +67,7 @@ public class App {
         }
     }
     public static void main(String[] args) {
+        initAbiturient();
         print(abiturient);
         System.out.println("");
         badMarks(abiturient);

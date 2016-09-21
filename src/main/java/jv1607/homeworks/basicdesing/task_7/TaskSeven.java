@@ -1,28 +1,19 @@
-
 package jv1607.homeworks.basicdesing.task_7;
 
 import java.util.Random;
 import java.util.Scanner;
 
 public class TaskSeven {
-     static Scanner sc= new Scanner(System.in);
+    static Scanner sc= new Scanner(System.in);
+    static Random r = new Random();
+    static int [][] array;
     public static void main(String[] args) {
         System.out.println("Введите размер двухмерного массива: ");
         int n=sc.nextInt();
         int m=sc.nextInt();
-        int [][] array=new int [n][m];
-        Random r = new Random();
-         for(int i=0; i<array.length; i++){
-            for(int j=0; j<array.length; j++){
-                array[i][j]=r.nextInt(100);
-            }
-        }
-        for(int i=0; i<array.length; i++){
-            for(int j=0; j<array.length; j++){
-                System.out.print(" " + array[i][j]);
-            }
-            System.out.println("");
-        }
+        greatArray(n,m);
+        System.out.println("");
+        printArray();
         System.out.println("");
         rightShift(array, n, m);
         System.out.println("");
@@ -31,6 +22,23 @@ public class TaskSeven {
         downShift(array, n, m);
         System.out.println("");
         upShift(array, n, m);
+    }
+    
+    public static void greatArray(int n, int m){
+        array=new int [n][m];
+         for(int i=0; i<array.length; i++){
+            for(int j=0; j<array.length; j++){
+                array[i][j]=r.nextInt(100);
+            }
+        }
+    }
+    public static void printArray(){
+        for(int i=0; i<array.length; i++){
+            for(int j=0; j<array.length; j++){
+                System.out.print(" " + array[i][j]);
+            }
+            System.out.println("");
+        }
     }
     static void leftShift(int array[][], int n, int m){
         System.out.print("Введите число на сколько хотите сдвинуть массив влево: ");

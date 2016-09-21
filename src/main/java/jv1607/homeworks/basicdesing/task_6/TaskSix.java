@@ -1,8 +1,9 @@
-package jv1607.homeworks.basicDesing.task_6;
+
+package jv1607.homeworks.basicdesing.task_6;
 
 public class TaskSix {
+    static int [][]array = new int [10][];
     public static void main(String[] args) {
-        int [][]array= new int [10][];
         printArray(array);
         System.out.println("");
         verticalArray(array);
@@ -11,7 +12,8 @@ public class TaskSix {
         System.out.println("");
         HorizAndVertArray(array);
     }
-    static void verticalArray(int array[][]){
+    
+    public static void verticalArray(int array[][]){
         System.out.println("Вертикальное отражение");
         for(int i=0; i<array.length; i++){
             for(int j=0; j<array.length-i; j++){
@@ -20,7 +22,8 @@ public class TaskSix {
             System.out.println("");
         }
     }
-    static void printArray(int array[][]){
+    
+    public static void printArray(int array[][]){
         System.out.println("Рванный массив: ");
         for(int i=0; i<array.length; i++){
             for(int j=0; j<i+1; j++){
@@ -29,7 +32,8 @@ public class TaskSix {
             System.out.println("");
         }
     }
-    static void horizontalArray(int array[][]){
+    
+    public static void horizontalArray(int array[][]){
         System.out.println("Горизонтальное отражение: ");
         for(int i=0; i<array.length; i++){
             for(int j=0; j<array.length; j++){
@@ -44,7 +48,8 @@ public class TaskSix {
             System.out.println("");
         }
     }
-    static void HorizAndVertArray(int array[][]){
+    
+    public static void HorizAndVertArray(int array[][]){
         System.out.println("Горизонтальное и вертикальное отражение: ");
         for(int i=array.length-1; i>=0; i--){
             for(int j=0; j<array.length; j++){

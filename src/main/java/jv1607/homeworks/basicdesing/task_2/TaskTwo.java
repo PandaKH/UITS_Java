@@ -3,11 +3,14 @@ package jv1607.homeworks.basicdesing.task_2;
 
 import java.util.Scanner;
 
-
 public class TaskTwo {
+    static Scanner sc = new Scanner(System.in);
+    
     public static void main(String[] args) {
+        input();
+    }
+    public static void input(){
         String str="";
-        Scanner sc = new Scanner(System.in);
         System.out.println("Введите число от 0 до 99!!!");
         int n = sc.nextInt();
         if(n>9 && n<20){

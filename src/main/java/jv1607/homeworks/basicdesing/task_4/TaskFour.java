@@ -5,19 +5,15 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class TaskFour {
+    static Scanner sc = new Scanner(System.in);
+    static Random r = new Random();
+    static int [] array;
+    
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Введите размер одномерного массива: ");
-        int n = sc.nextInt();
-        int [] array = new int [n];
-            Random r = new Random();
-        for (int i=0; i<array.length; i++){
-            array[i]=r.nextInt(250);
-        }
+        greatArray();
+        System.out.println("");
         System.out.println("Начальный массив: ");
-        for (int i=0; i<array.length; i++){
-            System.out.print(" " + array[i]);
-        }
+        printArray();
         System.out.println("");
         sortedArray(array);
         System.out.println("");
@@ -29,7 +25,22 @@ public class TaskFour {
         System.out.println("");
         sumArray(array);
         System.out.println("");
-        productArray(array);
+        productArray(array); 
+    }
+    public static void greatArray(){
+        System.out.print("Введите размер одномерного массива: ");
+        int n = sc.nextInt();
+        array = new int [n];
+        for (int i=0; i<array.length; i++){
+            array[i]=r.nextInt(250);
+        }
+        
+    }
+    public static void printArray(){
+        for (int i=0; i<array.length; i++){
+            System.out.print(" " + array[i]);
+        }
+        System.out.println("");
     }
     static void sortedArray(int array[]){
         for(int i=0; i<array.length; i++){
@@ -41,11 +52,11 @@ public class TaskFour {
                 }
             }
         }
+        System.out.println("");
         System.out.println("Прямой массив: ");
-        for(int i=0; i<array.length; i++){
-            System.out.print(" " + array[i]);
-        }
+        printArray();
     }
+    
     static void invertArray(int array[]){
        for(int i=0; i<array.length; i++){
             for(int j = 0 ; j < array.length-1; j++){
@@ -57,9 +68,7 @@ public class TaskFour {
             }
         }
         System.out.println("Обратный массив: ");
-        for(int i=0; i<array.length; i++){
-            System.out.print(" " + array[i]);
-        }
+        printArray();
     }
     static void evenArray(int array[]){
         System.out.println("Массив с чётными элементами: ");
@@ -68,6 +77,7 @@ public class TaskFour {
                 System.out.print(" " + array[i]);
             }
         }
+        System.out.println("");
     }
     static void oddArray(int array[]){
         System.out.println("Массив с нечётными элементами: ");
@@ -76,6 +86,7 @@ public class TaskFour {
                 System.out.print(" " + array[i]);
             }
         }
+        System.out.println("");
     }
     static void sumArray(int array[]){
         int sum=0;
@@ -85,8 +96,9 @@ public class TaskFour {
             }
         }
         System.out.println("Cумма элементов, кратных 7: ");
-        System.out.print(sum);
+        System.out.println(sum);
     }
+    
     static void productArray(int array[]){
         int product=1;
         for(int i=0; i<array.length; i++){
@@ -95,7 +107,7 @@ public class TaskFour {
             }
         }
         System.out.println("Произведение элементов, кратных 3: ");
-        System.out.print(product);
+        System.out.println(product);
     }
     
 }

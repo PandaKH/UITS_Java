@@ -1,3 +1,4 @@
+
 package jv1607.homeworks.basictypes.task_2;
 
 public class TaskTwo {
@@ -23,12 +24,19 @@ public class TaskTwo {
         return a * b;
     }
     public static void main(String[] args){
-        System.out.println(LengthCicle(2));
-        System.out.println(AreaCicle(3));
-        System.out.println(AreaRing(4, 3));
-        System.out.println(PerimeterTriangle(2, 3, 4));
-        System.out.println(AreaTriangle(3, 4));
-        System.out.println(PerimeterRectangle(3, 2));
-        System.out.println(AreaRectangle(3, 4));
+        System.out.println("Длина окружности: ");
+        System.out.println("l=" + LengthCicle(2));
+        System.out.println("Площадь окружности ");
+        System.out.println("S=" + AreaCicle(3));
+        System.out.println("Площадь кольца: ");
+        System.out.println("S=" + AreaRing(4, 3));
+        System.out.println("Периметр треугольника: ");
+        System.out.println("P=" + PerimeterTriangle(2, 3, 4));
+        System.out.println("Площадь треугольника:");
+        System.out.println("S=" + AreaTriangle(3, 4));
+        System.out.println("Периметр прямоугольника: ");
+        System.out.println("P=" + PerimeterRectangle(3, 2));
+        System.out.println("Площадь прямоугольника: ");
+        System.out.println("Р="+AreaRectangle(3, 4));
     }
 }

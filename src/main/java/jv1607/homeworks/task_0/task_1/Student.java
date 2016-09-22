@@ -1,3 +1,4 @@
+
 package jv1607.homeworks.task_0.task_1;
 
 import java.text.ParseException;
@@ -43,15 +44,6 @@ public class Student{
         this.faculty = faculty;
         this.course = course;
         this.group = group;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if(!(obj instanceof Student)){
-            return false;
-        }
-        Student o = (Student) obj;
-        return this.faculty.equals(o.faculty);
     }
     
     public int getId() {

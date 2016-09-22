@@ -2,32 +2,26 @@
 package jv1607.homeworks.task_0_1.task_1;
 
 public class Flowers implements Comparable<Flowers>{
-    private Name name;
+    private String name;
     private int price;
     private Integer lvlFreshness;
     private int legth;
     
-    public enum Name{
-        Роза,
-        Ромашка,
-        Хризантема,
-        Гладиолус
-    }
     public Flowers() {
     }
 
-    public Flowers(Name name, int price, int lvlFreshness, int legth) {
+    public Flowers(String name, int price, int lvlFreshness, int legth) {
         this.name = name;
         this.price = price;
         this.lvlFreshness = lvlFreshness;
         this.legth = legth;
     }
 
-    public Name getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(Name name) {
+    public void setName(String name) {
         this.name = name;
     }
 

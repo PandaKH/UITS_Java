@@ -10,6 +10,13 @@ public class App {
     static Flowers[] flower;
     static Flowers[] bouquet;
     
+    static final String[] name={
+        "Роза",
+        "Ромашка",
+        "Хризантема",
+        "Гладиолус"
+    };
+
     public static void main(String[] args) {
         initFlowers();
         print(flower);
@@ -28,7 +35,7 @@ public class App {
         flower = new Flowers[50];
         for(int i = 0; i<flower.length; i++){
             Flowers f = new Flowers();
-            f.setName(Flowers.Name.values()[r.nextInt(4)]);
+            f.setName(name[r.nextInt(4)]);
             f.setLegth(r.nextInt(40)+40);
             if(f.getLegth()>=40 && f.getLegth()<=50){
                 f.setPrice(8);
@@ -50,7 +57,7 @@ public class App {
     public static int counterForRoses(){
         int countRose = 0;
         for(Flowers f: flower){
-            if(f.getName().equals(Flowers.Name.values()[0])){
+            if(f.getName().equals(name[0])){
                 countRose++;
             }
         }
@@ -60,7 +67,7 @@ public class App {
     public static int counterForChamomile(){
         int countChamomile = 0;
         for(Flowers f: flower){
-            if(f.getName().equals(Flowers.Name.values()[1])){
+            if(f.getName().equals(name[1])){
                 countChamomile++;
             }
         }
@@ -70,7 +77,7 @@ public class App {
     public static int counterForChrysanthemum(){
         int countChrysanthemum = 0;
         for(Flowers f: flower){
-            if(f.getName().equals(Flowers.Name.values()[2])){
+            if(f.getName().equals(name[2])){
                 countChrysanthemum++;
             }
         }
@@ -80,7 +87,7 @@ public class App {
     public static int counterForGladiolus(){
         int countGladiolus = 0;
         for(Flowers f: flower){
-            if(f.getName().equals(Flowers.Name.values()[3])){
+            if(f.getName().equals(name[3])){
                 countGladiolus++;
             }
         }
@@ -111,7 +118,7 @@ public class App {
                     if(counterForRoses()==0){
                         System.out.println("Роз больше нет!!!");
                     }
-                    while(!(flower[rose].getName().equals(Flowers.Name.values()[0]))){
+                    while(!(flower[rose].getName().equals(name[0]))){
                         rose++;
                     }
                     bouquet[i]=flower[rose];
@@ -125,7 +132,7 @@ public class App {
                     if(counterForChamomile()==0){
                         System.out.println("Ромашек больше нет!!!");
                     }
-                    while(!(flower[chamomile].getName().equals(Flowers.Name.values()[1]))){
+                    while(!(flower[chamomile].getName().equals(name[1]))){
                         chamomile++;
                     }
                     bouquet[i]=flower[chamomile];
@@ -139,7 +146,7 @@ public class App {
                     if(counterForChrysanthemum()==0){
                         System.out.println("Хризантем больше нет!!!");
                     }
-                    while(!(flower[chrysanthemum].getName().equals(Flowers.Name.values()[2]))){
+                    while(!(flower[chrysanthemum].getName().equals(name[2]))){
                         chrysanthemum++;
                     }
                     bouquet[i]=flower[chrysanthemum];
@@ -153,7 +160,7 @@ public class App {
                     if(counterForGladiolus()==0){
                         System.out.println("Хризантем больше нет!!!");
                     }
-                    while(!(flower[gladiolus].getName().equals(Flowers.Name.values()[3]))){
+                    while(!(flower[gladiolus].getName().equals(name[3]))){
                         gladiolus++;
                     }
                     bouquet[i]=flower[gladiolus];

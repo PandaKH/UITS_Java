@@ -10,40 +10,54 @@ public class App {
     static Random r = new Random();
     static Appliances [] out;
     
+    final static String[] name ={
+        "Фен",
+        "Обогреватель",
+        "Кофеварка",
+        "Тостер",
+        "Пылесос",
+        "Cтиральная_машина",
+        "Блендер",
+        "Монитор",
+        "Ноутбук",
+        "Принтер"
+    };
+    
     final static String[] status = {
         "not connected",
         "connected"
     };
+    
     public static void Appliances(){
         out = new Appliances[50];
         for(int i=0; i<out.length;i++){
             Appliances a = new Appliances();
-            a.setName(Appliances.Name.values()[r.nextInt(10)]);
-            if(a.getName().equals(Appliances.Name.values()[0])){
+            a.setName(name[r.nextInt(10)]);
+            if(a.getName().equals(name[0])){
                 a.setPower(1538);
             }
-            else if(a.getName().equals(Appliances.Name.values()[1])){
+            else if(a.getName().equals(name[1])){
                 a.setPower(1500);
             }
-            else if(a.getName().equals(Appliances.Name.values()[2])){
+            else if(a.getName().equals(name[2])){
                 a.setPower(1500);
             }
-            else if(a.getName().equals(Appliances.Name.values()[3])){
+            else if(a.getName().equals(name[3])){
                 a.setPower(1100);
             }
-            else if(a.getName().equals(Appliances.Name.values()[4])){
+            else if(a.getName().equals(name[4])){
                 a.setPower(650);
             }
-            else if(a.getName().equals(Appliances.Name.values()[5])){
+            else if(a.getName().equals(name[5])){
                 a.setPower(425);
             }
-            else if(a.getName().equals(Appliances.Name.values()[6])){
+            else if(a.getName().equals(name[6])){
                 a.setPower(300);
             }
-            else if(a.getName().equals(Appliances.Name.values()[7])){
+            else if(a.getName().equals(name[7])){
                 a.setPower(150 );
             }
-            else if(a.getName().equals(Appliances.Name.values()[8])){
+            else if(a.getName().equals(name[8])){
                 a.setPower(50);
             }
             else{
@@ -77,70 +91,70 @@ public class App {
                 switch(sc.nextInt()){
                     case 1:{
                         hairdryer++;
-                        while(!(out[hairdryer].getName()==Appliances.Name.values()[0])){
+                        while(!(out[hairdryer].getName()==name[0])){
                             hairdryer++;
                         }
                         out[hairdryer].setStatus(status[1]);
                     }break;
                     case 2:{
                         heater++;
-                        while(!(out[heater].getName()==Appliances.Name.values()[1])){
+                        while(!(out[heater].getName()==name[1])){
                             heater++;
                         }
                         out[heater].setStatus(status[1]);
                     }break;
                     case 3:{
                         coffeeMaker++;
-                        while(!(out[coffeeMaker].getName()==Appliances.Name.values()[2])){
+                        while(!(out[coffeeMaker].getName()==name[2])){
                             coffeeMaker++;
                         }
                         out[coffeeMaker].setStatus(status[1]);
                     }break;
                     case 4:{
                         toaster++;
-                        while(!(out[toaster].getName()==Appliances.Name.values()[3])){
+                        while(!(out[toaster].getName()==name[3])){
                             toaster++;
                         }
                         out[toaster].setStatus(status[1]);
                     }break;
                     case 5:{
                         avacuumCleaner++;
-                        while(!(out[avacuumCleaner].getName()==Appliances.Name.values()[4])){
+                        while(!(out[avacuumCleaner].getName()==name[4])){
                             avacuumCleaner++;
                         }
                         out[avacuumCleaner].setStatus(status[1]);
                     }break;
                     case 6:{
                         washingMachine++;
-                        while(!(out[washingMachine].getName()==Appliances.Name.values()[5])){
+                        while(!(out[washingMachine].getName()==name[5])){
                             washingMachine++;
                         }
                         out[washingMachine].setStatus(status[1]);
                     }break;
                     case 7:{
                         blender++;
-                        while(!(out[blender].getName()==Appliances.Name.values()[6])){
+                        while(!(out[blender].getName()==name[6])){
                             blender++;
                         }
                         out[blender].setStatus(status[1]);
                     }break;
                     case 8:{
                         monitor++;
-                        while(!(out[monitor].getName()==Appliances.Name.values()[7])){
+                        while(!(out[monitor].getName()==name[7])){
                             monitor++;
                         }
                         out[monitor].setStatus(status[1]);
                     }break;
                     case 9:{
                         laptop++;
-                        while(!(out[laptop].getName()==Appliances.Name.values()[8])){
+                        while(!(out[laptop].getName()==name[8])){
                             laptop++;
                         }
                         out[laptop].setStatus(status[1]);
                     }break;
                     case 10:{
                         printer++;
-                        while(!(out[printer].getName()==Appliances.Name.values()[9])){
+                        while(!(out[printer].getName()==name[9])){
                             printer++;
                         }
                         out[printer].setStatus(status[1]);

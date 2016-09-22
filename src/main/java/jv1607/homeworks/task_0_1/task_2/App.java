@@ -19,11 +19,19 @@ public class App {
         500
     };
     
+    static final String [] name ={
+        "Леденцы",
+        "Жевательная",
+        "Ириски",
+        "Мармелад",
+        "Шоколад",
+        "Молочные"
+    };
     public static void initCandys(){
         candy = new Candys[50];
         for(int i=0; i<candy.length; i++){
             Candys p = new Candys();
-            p.setName(Candys.Name.values()[r.nextInt(6)]);
+            p.setName(name[r.nextInt(6)]);
             p.setWeigth(weigth[r.nextInt(5)]);
             if(p.getWeigth()==0){
                 p.setSugar(r.nextInt(20)+80);
@@ -50,7 +58,7 @@ public class App {
     public static int counterLollipops(){
         int countoLollipops=0;
         for(int i=0;i<candy.length;i++){
-            if(candy[i].getName().equals(Candys.Name.values()[0])){
+            if(candy[i].getName().equals(name[0])){
                 countoLollipops+=candy[i].getWeigth();
             }
         }
@@ -59,7 +67,7 @@ public class App {
     public static int counterChewing(){
         int counterChewing=0;
         for(int i=0;i<candy.length;i++){
-            if(candy[i].getName().equals(Candys.Name.values()[1])){
+            if(candy[i].getName().equals(name[1])){
                 counterChewing+=candy[i].getWeigth();
             }
         }
@@ -68,7 +76,7 @@ public class App {
     public static int counterToffees(){
         int counterToffees=0;
         for(int i=0;i<candy.length;i++){
-            if(candy[i].getName().equals(Candys.Name.values()[2])){
+            if(candy[i].getName().equals(name[2])){
                 counterToffees+=candy[i].getWeigth();
             }
         }
@@ -77,7 +85,7 @@ public class App {
     public static int counterMarmalade(){
         int counterMarmalade=0;
         for(int i=0;i<candy.length;i++){
-            if(candy[i].getName().equals(Candys.Name.values()[3])){
+            if(candy[i].getName().equals(name[3])){
                 counterMarmalade+=candy[i].getWeigth();
             }
         }
@@ -86,7 +94,7 @@ public class App {
     public static int counterChocolate(){
         int counterChocolate=0;
         for(int i=0;i<candy.length;i++){
-            if(candy[i].getName().equals(Candys.Name.values()[4])){
+            if(candy[i].getName().equals(name[4])){
                 counterChocolate+=candy[i].getWeigth();
             }
         }
@@ -95,7 +103,7 @@ public class App {
     public static int counterDairy(){
         int counterDairy=0;
         for(int i=0;i<candy.length;i++){
-            if(candy[i].getName().equals(Candys.Name.values()[5])){
+            if(candy[i].getName().equals(name[5])){
                 counterDairy+=candy[i].getWeigth();
             }
         }
@@ -129,7 +137,7 @@ public class App {
                 switch(l){
                     case 1:{
                         led++;
-                        while(!(candy[led].getName().equals(Candys.Name.values()[0])&&candy[led].getWeigth()==m)){
+                        while(!(candy[led].getName().equals(name[0])&&candy[led].getWeigth()==m)){
                             led++;
                         }
                         present[i]= candy[led];
@@ -137,7 +145,7 @@ public class App {
                     }break;
                     case 2:{
                         jev++;
-                        while(!(candy[jev].getName().equals(Candys.Name.values()[1])&&candy[jev].getWeigth()==m)){
+                        while(!(candy[jev].getName().equals(name[1])&&candy[jev].getWeigth()==m)){
                             jev++;
                         }
                         present[i]= candy[jev];
@@ -145,7 +153,7 @@ public class App {
                     }break;
                     case 3:{
                         iris++;
-                        while(!(candy[iris].getName().equals(Candys.Name.values()[2])&&candy[iris].getWeigth()==m)){
+                        while(!(candy[iris].getName().equals(name[2])&&candy[iris].getWeigth()==m)){
                             iris++;
                         }
                         present[i]= candy[iris];
@@ -153,7 +161,7 @@ public class App {
                     }break;
                     case 4:{
                         marm++;
-                        while(!(candy[marm].getName().equals(Candys.Name.values()[3])&&candy[marm].getWeigth()==m)){
+                        while(!(candy[marm].getName().equals(name[3])&&candy[marm].getWeigth()==m)){
                             marm++;
                         }
                         present[i]= candy[marm];
@@ -161,7 +169,7 @@ public class App {
                     }break;
                     case 5:{
                         chok++;
-                        while(!(candy[chok].getName().equals(Candys.Name.values()[4])&&candy[chok].getWeigth()==m)){
+                        while(!(candy[chok].getName().equals(name[4])&&candy[chok].getWeigth()==m)){
                             chok++;
                         }
                         present[i]= candy[chok];
@@ -169,7 +177,7 @@ public class App {
                     }break;
                     case 6:{
                         molok++;
-                        while(!(candy[molok].getName().equals(Candys.Name.values()[5])&&candy[molok].getWeigth()==m)){
+                        while(!(candy[molok].getName().equals(name[5])&&candy[molok].getWeigth()==m)){
                             molok++;
                         }
                         present[i]= candy[molok];

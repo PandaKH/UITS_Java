@@ -11,27 +11,37 @@ public class App {
     static Chef[] vegetable;
     static Chef[] salad;
     
+    static final String[] name = {
+        "Помидор",
+        "Огурцы",
+        "Перец болгарский",
+        "Чеснок",
+        "Баклажан",
+        "Морковь",
+        "Лук репчатый",
+    };
+    
     public static void initChef(){
         vegetable=new Chef[50];
         for(int i=0;i<vegetable.length;i++){
             Chef c = new Chef();
-            c.setName(Chef.Name.values()[r.nextInt(7)]);
-            if(c.getName().equals(Chef.Name.values()[0])){
+            c.setName(name[r.nextInt(7)]);
+            if(c.getName().equals(name[0])){
                 c.setCalorific(r.nextInt(30)+10);
             }
-            else if(c.getName().equals(Chef.Name.values()[1])){
+            else if(c.getName().equals(name[1])){
                 c.setCalorific(r.nextInt(13)+7);
             }
-            else if(c.getName().equals(Chef.Name.values()[2])){
+            else if(c.getName().equals(name[2])){
                 c.setCalorific(r.nextInt(15)+20);
             }
-            else if(c.getName().equals(Chef.Name.values()[3])){
+            else if(c.getName().equals(name[3])){
                 c.setCalorific(r.nextInt(30)+140);
             }
-            else if(c.getName().equals(Chef.Name.values()[4])){
+            else if(c.getName().equals(name[4])){
                 c.setCalorific(r.nextInt(60)+40);
             }
-            else if(c.getName().equals(Chef.Name.values()[5])){
+            else if(c.getName().equals(name[5])){
                 c.setCalorific(r.nextInt(70)+30);
             }
             else{
@@ -77,7 +87,7 @@ public class App {
                         if(counterTomato==0){
                             System.out.println("Помидор больше нет!!!");
                         }
-                        while(!(vegetable[tomato].getName().equals(Chef.Name.values()[0]))){
+                        while(!(vegetable[tomato].getName().equals(name[0]))){
                             tomato++;
                         }
                         salad[i]=vegetable[tomato];
@@ -91,7 +101,7 @@ public class App {
                         if(counterCucumbers==0){
                             System.out.println("Огурцов больше нет!!!");
                         }
-                        while(!(vegetable[cucumbers].getName().equals(Chef.Name.values()[1]))){
+                        while(!(vegetable[cucumbers].getName().equals(name[1]))){
                             cucumbers++;
                         }
                         salad[i]=vegetable[cucumbers];
@@ -104,7 +114,7 @@ public class App {
                         if(counterPepper==0){
                             System.out.println("Перца больше нет!!!");
                         }
-                        while(!(vegetable[pepper].getName().equals(Chef.Name.values()[2]))){
+                        while(!(vegetable[pepper].getName().equals(name[2]))){
                             pepper++;
                         }
                         salad[i]=vegetable[pepper];
@@ -118,7 +128,7 @@ public class App {
                         if(counterGarlic==0){
                             System.out.println("Чеснока больше нет!!!");
                         }
-                        while(!(vegetable[garlic].getName().equals(Chef.Name.values()[3]))){
+                        while(!(vegetable[garlic].getName().equals(name[3]))){
                             garlic++;
                         }
                         salad[i]=vegetable[garlic];
@@ -132,7 +142,7 @@ public class App {
                         if(counterEggplant==0){
                             System.out.println("Баклажана больше нет!!!");
                         }
-                        while(!(vegetable[eggplant].getName().equals(Chef.Name.values()[4]))){
+                        while(!(vegetable[eggplant].getName().equals(name[4]))){
                             eggplant++;
                         }
                         salad[i]=vegetable[eggplant];
@@ -146,7 +156,7 @@ public class App {
                         if(counterCarrot==0){
                             System.out.println("Баклажана больше нет!!!");
                         }
-                        while(!(vegetable[carrot].getName().equals(Chef.Name.values()[5]))){
+                        while(!(vegetable[carrot].getName().equals(name[5]))){
                             carrot++;
                         }
                         salad[i]=vegetable[carrot];
@@ -160,7 +170,7 @@ public class App {
                         if(counterOnions==0){
                             System.out.println("Баклажана больше нет!!!");
                         }
-                        while(!(vegetable[onions].getName().equals(Chef.Name.values()[6]))){
+                        while(!(vegetable[onions].getName().equals(name[6]))){
                             onions++;
                         }
                         salad[i]=vegetable[onions];
@@ -206,7 +216,7 @@ public class App {
     public static int counterTomato(){
         int countTomato=0;
         for(int i=0;i<vegetable.length;i++){
-            if(vegetable[i].getName().equals(Chef.Name.values()[0])){
+            if(vegetable[i].getName().equals(name[0])){
                 countTomato++;
             }
         }
@@ -215,7 +225,7 @@ public class App {
     public static int counterCucumbers(){
         int countCucumbers=0;
         for(int i=0;i<vegetable.length;i++){
-            if(vegetable[i].getName().equals(Chef.Name.values()[0])){
+            if(vegetable[i].getName().equals(name[0])){
                 countCucumbers++;
             }
         }
@@ -224,7 +234,7 @@ public class App {
     public static int counterPepper(){
         int countPepper=0;
         for(int i=0;i<vegetable.length;i++){
-            if(vegetable[i].getName().equals(Chef.Name.values()[0])){
+            if(vegetable[i].getName().equals(name[0])){
                 countPepper++;
             }
         }
@@ -233,7 +243,7 @@ public class App {
     public static int counterGarlic(){
         int countGarlic=0;
         for(int i=0;i<vegetable.length;i++){
-            if(vegetable[i].getName().equals(Chef.Name.values()[0])){
+            if(vegetable[i].getName().equals(name[0])){
                 countGarlic++;
             }
         }
@@ -242,7 +252,7 @@ public class App {
     public static int counterEggplant(){
         int countEggplant=0;
         for(int i=0;i<vegetable.length;i++){
-            if(vegetable[i].getName().equals(Chef.Name.values()[0])){
+            if(vegetable[i].getName().equals(name[0])){
                 countEggplant++;
             }
         }
@@ -251,7 +261,7 @@ public class App {
     public static int counterCarrot(){
         int countCarrot=0;
         for(int i=0;i<vegetable.length;i++){
-            if(vegetable[i].getName().equals(Chef.Name.values()[0])){
+            if(vegetable[i].getName().equals(name[0])){
                 countCarrot++;
             }
         }
@@ -260,7 +270,7 @@ public class App {
     public static int counterOnions(){
         int countOnions=0;
         for(int i=0;i<vegetable.length;i++){
-            if(vegetable[i].getName().equals(Chef.Name.values()[0])){
+            if(vegetable[i].getName().equals(name[0])){
                 countOnions++;
             }
         }

@@ -2,32 +2,22 @@
 package jv1607.homeworks.task_0_1.task_4;
 
 public class Chef implements Comparable<Chef>{
-    private Name name;
+    private String name;
     private int calorific;
 
     public Chef() {
     }
 
-    public Chef(Name name, int calorific) {
+    public Chef(String name, int calorific) {
         this.name = name;
         this.calorific = calorific;
     }
     
-    public enum Name{
-        Помидор,
-        Огурцы,
-        Перец_болгарский,
-        Чеснок,
-        Баклажан,
-        Морковь,
-        Лук_репчатый,
-    }
-    
-    public Name getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(Name name) {
+    public void setName(String name) {
         this.name = name;
     }
 

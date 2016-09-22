@@ -2,36 +2,24 @@
 package jv1607.homeworks.task_0_1.task_3;
 
 public class Appliances implements Comparable<Appliances>{
-    private Name name;
+    private String name;
     private Integer power;
     private String status;
     
     public Appliances() {
     }
 
-    public Appliances(Name name, int power, String status) {
+    public Appliances(String name, int power, String status) {
         this.name = name;
         this.power = power;
         this.status = status;
     }
     
-    public enum Name {
-        Фен,
-        Обогреватель,
-        Кофеварка,
-        Тостер,
-        Пылесос,
-        Cтиральная_машина,
-        Блендер,
-        Монитор,
-        Ноутбук,
-        Принтер
-    }
-    public Name getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(Name name) {
+    public void setName(String name) {
         this.name = name;
     }
 

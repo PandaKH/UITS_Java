@@ -1,15 +1,27 @@
 
 package jv1607.homeworks.ht_Interface.classes;
 
+import java.util.Arrays;
+
 public class Basket {
     private Plant[] basket;
-    private int counter=0;
+    private static int counter=0;
+    public Basket() {
+    }
     
+    public Basket(Plant[] basket) {
+        this.basket = basket;
+    }
 
+    public Basket(Plant[] basket, int counter) {
+        this.basket = basket;
+        this.counter = counter;
+    }
+    
     public Plant[] getPlant() {
         return basket;
     }
-
+    
     public void setPlant(Plant[] plant) {
         this.basket= plant;
     }
@@ -19,14 +31,6 @@ public class Basket {
     }
 
     public void setCounter(int counter) {
-        this.counter = counter;
-    }
-
-    public Basket() {
-    }
-
-    public Basket(Plant[] basket, int counter) {
-        this.basket = basket;
         this.counter = counter;
     }
     
@@ -45,10 +49,42 @@ public class Basket {
         counter ++;
     }
     
-    public Plant extract(int position){
-        Plant method = basket[position];
-        basket[position]= null;
+    public Plant extract(int index){
+        Plant method = basket[index];
+        int numMoved = basket.length - index - 1;
+        if (numMoved > 0){
+            System.arraycopy(basket, index+1, basket, index,numMoved);
+        }
+        basket[basket.length-1]=null;
         return method;
+    }
+    
+    public Plant[] extractAll(Plant[] plant){
+        Plant[] array =  new Plant[plant.length];
+        for(int i=0;i<plant.length;i++){
+            array[i]=plant[i];
+            plant[i]=null;
+        }
+        return array;
+    }
+    
+    public double getWeight(){
+        double weight = 0;
+        for (int i = 0; i < basket.length; i++) {
+            if(basket[i]==null){
+                break;
+            }
+            weight += basket[i].getWeight();
+        }
+        return weight;
+    }
+
+    @Override
+    public String toString() {
+        return "Basket{\n" +
+                "basket=\n"
+                +Arrays.toString(basket)
+                + "\n" +'}';
     }
     
 }

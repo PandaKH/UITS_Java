@@ -4,8 +4,11 @@ import jv1607.homeworks.ht_Interface.classes.Fruit;
 
 public class Apple extends Fruit{
 
-    public Apple(double weight, String color, boolean maturity, String status, boolean brush) {
-        super(weight, color, maturity, status, brush);
+    public Apple() {
+    }
+
+    public Apple(double weight, String color, boolean maturity, boolean brush) {
+        super(weight, color, maturity,brush);
     }
     
     @Override

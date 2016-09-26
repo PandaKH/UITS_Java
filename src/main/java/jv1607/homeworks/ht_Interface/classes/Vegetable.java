@@ -8,8 +8,8 @@ public class Vegetable extends Plant implements Peellable{
     public Vegetable() {
     }
         
-    public Vegetable(double weight, String color, boolean maturity, String status, boolean brush) {
-        super(weight, color, maturity, status, brush);
+    public Vegetable(double weight, String color, boolean maturity,boolean brush) {
+        super(weight, color, maturity, brush);
     }
     
     @Override

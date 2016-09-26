@@ -7,13 +7,13 @@ public class Fruit extends Plant implements Peellable{
     public Fruit() {
     }
     
-    public Fruit(double weight, String color, boolean maturity, String status, boolean brush) {
-        super(weight, color, maturity, status, brush);
+    public Fruit(double weight, String color, boolean maturity, boolean brush) {
+        super(weight, color, maturity, brush);
     }
     
     @Override
     public void peell(){
-        this.setWeight(getWeight()*0.92);
+        this.setWeight(getWeight()*0.98);
         this.setBrush(true);
     }
 
